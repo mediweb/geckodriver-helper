@@ -14,7 +14,7 @@ module Geckodriver
 
     def run *args
       download
-      exec binary_path, *args
+      exec binary_path, *[*args, "-vv"]
     end
 
     def download hit_network=false
